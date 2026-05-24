@@ -1,0 +1,55 @@
+# =============================================================================
+# .dockerignore - PanganPintar API
+# Mengecualikan file/folder yang tidak diperlukan di Docker image
+# =============================================================================
+
+# Virtual environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Version control
+.git/
+.gitignore
+
+# Environment file (env vars di-set via HuggingFace Spaces UI)
+.env
+.env.*
+
+# Folder backup artifacts lama
+artifacts_old/
+artifacts_old_v2/
+artifacts_v2_old/
+artifacts_v3_old/
+*_old/
+
+# Scripts dan tests tidak diperlukan di production
+scripts/
+tests/
+
+# Dokumentasi (kecuali README.md yang dipakai HuggingFace Spaces)
+*.md
+!README.md
+
+# IDE dan editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter notebooks
+Pangan_Pintar_Training_*.ipynb
+*.ipynb
+.ipynb_checkpoints/
+
+# Docker file sendiri tidak perlu di-copy
+Dockerfile
+docker-compose*.yml
+
+# Claude/Gemini config
+.claude/
+.gemini/
